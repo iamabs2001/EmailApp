@@ -1,0 +1,11 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+$EmailApp-primary:mat-palette($mat-blue,700);
+$EmailApp-accent: mat-palette($mat-pink, A400);
+$EmailApp-warn: mat-palette($mat-red);
+$EmailApp-secondary:mat-palette($mat-red);
+
+$EmailApp-theme: mat-light-theme($EmailApp-primary, $EmailApp-accent, $EmailApp-warn);
+
+@include angular-material-theme($EmailApp-theme);
