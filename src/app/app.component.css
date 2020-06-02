@@ -1,0 +1,20 @@
+mat-sidenav {
+    width: 300px;
+    padding:20px;
+}
+mat-toolbar {
+    position:fixed;
+    top:0;
+}
+.mat-drawer { 
+    background-color: #023075;
+    color:#fff
+}
+.main-content {
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 68px;
+}
+.toolbar-spacer {
+    flex: 1 1 auto;
+}

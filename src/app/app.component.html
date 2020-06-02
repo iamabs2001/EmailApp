@@ -1,3 +1,34 @@
-<h1> Hello world </h1>
-<hr>
-<router-outlet></router-outlet>
+<!-- Full container -->
+<mat-sidenav-container fullscreen>
+    <!-- side nav -->
+    <mat-sidenav mode="end" #sidenav position="start">
+      <img src="../assets//mail.svg" width="50px" height="50px"><hr>
+      <button mat-button (click)="sidenav.toggle();"> Login Guest </button>
+    </mat-sidenav>
+    <!-- content -->
+    <mat-sidenav-content>
+        <!-- Toolbar -->
+      <mat-toolbar color="primary">
+        <button mat-button (click)="sidenav.toggle()">
+          <i class="material-icons">menu</i>
+        </button>
+        <img src="../assets/mail.svg" width="50px" height="50px"> &nbsp;
+        Email
+        <span class="toolbar-spacer"></span>
+        <button mat-icon-button><i class="material-icons">lock</i></button>
+        <button mat-icon-button><i class="material-icons">person</i></button>
+        <button mat-icon-button><i class="material-icons">email</i></button>
+        <button mat-icon-button><i class="material-icons">exit_to_app</i></button>
+        <button mat-icon-button><i class="material-icons">delete</i></button>
+        <button mat-icon-button><i class="material-icons">get_app</i></button>
+        <button mat-icon-button><i class="material-icons">fullscreen_exit</i></button>
+        <button mat-icon-button><i class="material-icons">add_circle_outline</i></button>
+      </mat-toolbar>
+      <!-- main -->
+      <div class="main-content">
+         Welcome!
+        <router-outlet></router-outlet>
+      </div>
+      
+    </mat-sidenav-content>
+</mat-sidenav-container>
