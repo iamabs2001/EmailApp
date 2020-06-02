@@ -2,17 +2,23 @@
     <mat-card-header>
             <div mat-card-avatar class="header-image"></div>
             <mat-card-title>Email</mat-card-title>
-            <mat-card-subtitle>Sign In</mat-card-subtitle>
+            <mat-card-subtitle>Sign Up</mat-card-subtitle>
             </mat-card-header>
     <mat-card-content>
         <!-- form  -->
-        <form #userLogin="ngForm">
+        <form #userRegister="ngForm">
         <mat-form-field appearance="outline">
-                <mat-label>Email</mat-label>
-                <input ngModel name="email" matInput type="email" placeholder="Your Email">
-                <i matSuffix class="material-icons">email</i>
-              </mat-form-field>
-        
+                <mat-label> Name </mat-label>
+                <input ngModel name="name" matInput type="text" placeholder="Full name">
+                <i matSuffix class="material-icons">person</i>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input ngModel name="email" matInput type="email" placeholder="Your Email">
+            <i matSuffix class="material-icons">email</i>
+        </mat-form-field>
+        <br>
         <mat-form-field appearance="outline">
             <mat-label>Password</mat-label>
             <input ngModel name="password" matInput type="{{pwd_show}}" placeholder="Your Password">
@@ -23,7 +29,7 @@
     <mat-divider>
     </mat-divider>
     <mat-card-actions>
-        <button mat-raised-button color="primary" (click)="doLogin(userLogin.value);">Login</button>
+        <button mat-raised-button color="primary" (click)="doRegister(userRegister.value);">Sign Up</button>
     </mat-card-actions>
 </mat-card>
 

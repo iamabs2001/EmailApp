@@ -1,0 +1,23 @@
+mat-card {
+    text-align: center;
+    max-width: 500px;    
+    width: 100%;
+}
+mat-form-field {
+    width: 90%;
+}
+.error-msg {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:Red;
+}
+.msg {
+    color:blue;
+}
+ul {
+    list-style: none;
+}
+
+.header-image {
+    background-image: url('../../assets/logo.png');
+    background-size: cover;
+  }

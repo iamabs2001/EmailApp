@@ -11,6 +11,10 @@ export class AuthService {
   constructor(private http : HttpClient) {}
 
   login(email, password) {
-      return this.http.post(this.BASE_URL+"/auth/login",{email,password},{observe:'response'});
+    return this.http.post(this.BASE_URL+"/auth/login",{email,password},{observe:'response'});
+  }
+
+  register(name,email,password) {
+    return this.http.post(this.BASE_URL+"/auth/signup",{name,email,password},{observe:'response'});
   }
 }
