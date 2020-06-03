@@ -3,10 +3,10 @@
     <!-- side nav -->
     <mat-sidenav mode="end" #sidenav position="start">
       <img src="../assets//mail.svg" width="50px" height="50px"><hr>
-      <button class="nav-item" mat-button (click)="sidenav.toggle();" [routerLink]="['/login']" *ngIf="!isLoggedIn"> Login </button>
-      <button class="nav-item" mat-button (click)="sidenav.toggle();" [routerLink]="['/register']" *ngIf="!isLoggedIn"> Register </button>
-      <button class="nav-item" mat-button (click)="sidenav.toggle();" (click)="doLogout();" *ngIf="isLoggedIn"> Logout </button>
+      <button class="nav-item" mat-button (click)="sidenav.toggle();" [routerLink]="['/login']" > Login </button>
+      <button class="nav-item" mat-button (click)="sidenav.toggle();" [routerLink]="['/register']"> Register </button>
       <hr>
+      <button class="nav-item" mat-button (click)="sidenav.toggle();" (click)="doLogout();" *ngIf="isLoggedIn"> Logout </button>
       <button class="nav-item" mat-button (click)="sidenav.toggle();" [routerLink]="['/profile']" *ngIf="isLoggedIn"> Your Profile </button>
     </mat-sidenav>
     <!-- content -->
@@ -19,6 +19,7 @@
         <img src="../assets/mail.svg" width="50px" height="50px"> &nbsp;
         Email
         <span class="toolbar-spacer"></span>
+        <div class="toolbar-items">
         <button mat-icon-button><i class="material-icons">lock</i></button>
         <button mat-icon-button><i class="material-icons">person</i></button>
         <button mat-icon-button><i class="material-icons">email</i></button>
@@ -27,6 +28,7 @@
         <button mat-icon-button><i class="material-icons">get_app</i></button>
         <button mat-icon-button><i class="material-icons">fullscreen_exit</i></button>
         <button mat-icon-button><i class="material-icons">add_circle_outline</i></button>
+      </div>
       </mat-toolbar>
       <!-- main -->
       <div class="main-content">

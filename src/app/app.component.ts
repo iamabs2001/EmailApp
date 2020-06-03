@@ -10,7 +10,9 @@ export class AppComponent {
 
   isLoggedIn = false;
 
-  constructor(private router : Router) {}
+  constructor(private router : Router) { 
+    this.ActivateFeatures();
+  }
     doLogout() {
       localStorage.removeItem('token');
       this.isLoggedIn = false;

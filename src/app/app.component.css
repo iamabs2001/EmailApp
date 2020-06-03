@@ -21,3 +21,7 @@ mat-toolbar {
 .nav-item {
     width: 90%;
 }
+
+@media( max-width:510px) {
+.toolbar-items { display: none; }
+}

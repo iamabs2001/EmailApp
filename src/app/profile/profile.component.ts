@@ -47,14 +47,16 @@ export class ProfileComponent implements OnInit {
         if(data['body']['success'] == true) {
           this.message = data['body']['message'];
           this.errors = [];
+          this.getProfile();
         } else {
           this.message = data['body']['message'];
+          if(data['body']['error']['errors'])
           this.errors = data['body']['error']['errors'];
         }
       }
     })
     .catch(err => {
-      alert("something wrong in profile updation");
+      console.warn(" Error : "+err);
     });
   }
 }
