@@ -1,19 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Injector } from '@angular/core';
 import { AuthService } from '../services/auth.service';
 import { Router } from '@angular/router';
+import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
-  
+export class LoginComponent implements OnInit {  
+
   pwd_show : 'text' | 'password' = 'password';
   message = "";
   isError : Boolean = false;
   errors = [];
   constructor(private auth : AuthService,
+    private Injector : Injector,
     private router : Router) { }
 
   ngOnInit() { }
@@ -23,6 +25,7 @@ export class LoginComponent implements OnInit {
   }
 
   doLogin(user) {
+    let feature = this.Injector.get(AppComponent);
     this.auth.login(user.email,user.password).toPromise().then(data => {
         if(data['body']['success'] == false) {
           if(data['body']['error']) {
@@ -39,6 +42,7 @@ export class LoginComponent implements OnInit {
           this.message = data['body']['message'];
           localStorage.setItem('token',data['body']['token']);
           this.isError = false;
+          feature.ActivateFeatures();
           this.router.navigateByUrl('profile');
         }
     }).catch(err => {
