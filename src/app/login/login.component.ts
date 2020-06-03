@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +13,8 @@ export class LoginComponent implements OnInit {
   message = "";
   isError : Boolean = false;
   errors = [];
-  constructor(private auth : AuthService) { }
+  constructor(private auth : AuthService,
+    private router : Router) { }
 
   ngOnInit() { }
 
@@ -37,6 +39,7 @@ export class LoginComponent implements OnInit {
           this.message = data['body']['message'];
           localStorage.setItem('token',data['body']['token']);
           this.isError = false;
+          this.router.navigateByUrl('profile');
         }
     }).catch(err => {
         alert("something wrong in login");

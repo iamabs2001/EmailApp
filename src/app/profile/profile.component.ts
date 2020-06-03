@@ -1,10 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProfileService } from '../services/profile.service';
-import * as Rx from "rxjs";
-import { from, Observable, throwError } from 'rxjs';
-import { map, catchError } from 'rxjs/operators';
 import { User } from '../model/user.model';
-
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
@@ -61,5 +57,4 @@ export class ProfileComponent implements OnInit {
       alert("something wrong in profile updation");
     });
   }
-
 }
