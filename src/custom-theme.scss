@@ -4,7 +4,8 @@
 $EmailApp-primary:mat-palette($mat-blue,700);
 $EmailApp-accent: mat-palette($mat-pink, A400);
 $EmailApp-warn: mat-palette($mat-red);
-$EmailApp-secondary:mat-palette($mat-red);
+$EmailApp-success:mat-palette($mat-green,A400);
+
 
 $EmailApp-theme: mat-light-theme($EmailApp-primary, $EmailApp-accent, $EmailApp-warn);
 

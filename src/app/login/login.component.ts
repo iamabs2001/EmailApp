@@ -22,14 +22,12 @@ export class LoginComponent implements OnInit {
 
   doLogin(user) {
     this.auth.login(user.email,user.password).toPromise().then(data => {
-        console.info(data);
         if(data['body']['success'] == false) {
           if(data['body']['error']) {
             this.message = ""
             this.isError = true;
             this.errors = [];
             this.errors = data['body']['error']['errors'];
-            console.log(this.errors);
           } else { this.isError = false }
           if(data['body']['message']) {
             this.message =  "";
@@ -41,7 +39,7 @@ export class LoginComponent implements OnInit {
           this.isError = false;
         }
     }).catch(err => {
-        alert("something wrong in app");
+        alert("something wrong in login");
     });
   }
 

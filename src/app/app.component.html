@@ -3,8 +3,10 @@
     <!-- side nav -->
     <mat-sidenav mode="end" #sidenav position="start">
       <img src="../assets//mail.svg" width="50px" height="50px"><hr>
-      <button mat-button (click)="sidenav.toggle();" [routerLink]="['/login']"> Login </button>
-      <button mat-button (click)="sidenav.toggle();" [routerLink]="['/register']"> Register </button>
+      <button class="nav-item" mat-button (click)="sidenav.toggle();" [routerLink]="['/login']"> Login </button>
+      <button class="nav-item" mat-button (click)="sidenav.toggle();" [routerLink]="['/register']"> Register </button>
+      <hr>
+      <button class="nav-item" mat-button (click)="sidenav.toggle();" [routerLink]="['/profile']"> Your Profile </button>
     </mat-sidenav>
     <!-- content -->
     <mat-sidenav-content>

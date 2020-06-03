@@ -1,0 +1,14 @@
+mat-card {
+    max-width: 500px;
+    width: 100%;
+}
+
+mat-form-field {
+    width: 90%;
+}
+.msg {
+    color:blue;
+}
+.error {
+    color:red;
+}

@@ -1,0 +1,34 @@
+<mat-card *ngIf="load">
+    <mat-card-header>
+        <mat-card-subtitle>{{user.email}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <img src="{{user.profile}}" alt="Profile" width="100px" height="100px">
+        <form #userUpdate="ngForm">
+            <mat-form-field appearance="outline">
+                <mat-label>Your Name</mat-label>
+                <input ngModel name="name" matInput type="text" placeholder="{{user.name}}" value="{{user.name}}">
+                <i matSuffix class="material-icons">person</i>
+            </mat-form-field>
+            <br>
+            <mat-form-field appearance="outline">
+                <mat-label>Change Your Password</mat-label>
+                <input ngModel name="password" matInput type="{{pwd_show}}" placeholder="Your New Password">
+                <button matSuffix mat-icon-button (click)="togglePwdShow();"><i class="material-icons">visibility</i></button>
+            </mat-form-field>
+        </form>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-raised-button color="success" (click)="updateProfile(userUpdate.value);">Save</button>
+    </mat-card-actions>
+    <p class="msg" *ngIf="message">
+        {{message}}
+    </p>
+</mat-card>
+
+<br>
+<mat-card *ngIf="errors.length">
+    <ul *ngFor="let error of errors">
+        <li class="error"> {{error.msg}} </li>
+    </ul>
+</mat-card>
