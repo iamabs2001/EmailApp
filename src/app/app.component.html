@@ -22,13 +22,13 @@
         Email
         <span class="toolbar-spacer"></span>
         <div class="toolbar-items">
-        <button mat-icon-button  matTooltip="Login"><i class="material-icons">login</i></button>
-        <button mat-icon-button  matTooltip="Profile"><i class="material-icons">person</i></button>
-        <button mat-icon-button  matTooltip="mail"><i class="material-icons">email</i></button>
-        <button mat-icon-button  matTooltip="Compose A Mail"><i class="material-icons">add_circle_outline</i></button>
+        <button *ngIf="!isLoggedIn" [routerLink]="['login']" mat-icon-button  matTooltip="Login"><i class="material-icons">login</i></button>
+        <button *ngIf="isLoggedIn" [routerLink]="['profile']" mat-icon-button  matTooltip="Profile"><i class="material-icons">person</i></button>
+        <button *ngIf="isLoggedIn" [routerLink]="['mail']" mat-icon-button  matTooltip="mail"><i class="material-icons">email</i></button>
+        <button *ngIf="isLoggedIn" mat-icon-button  matTooltip="Compose A Mail"><i class="material-icons">add_circle_outline</i></button>
         <button mat-icon-button  matTooltip="Install Now"><i class="material-icons">get_app</i></button>
-        <button mat-icon-button  matTooltip="FullScreen"><i class="material-icons">fullscreen_exit</i></button>
-        <button mat-icon-button  matTooltip="Logout"><i class="material-icons">logout</i></button>
+        <button mat-icon-button (click)="ToggleFullScreen();"  matTooltip="FullScreen"><i class="material-icons">fullscreen_exit</i></button>
+        <button *ngIf="isLoggedIn" (click)="doLogout();"   mat-icon-button  matTooltip="Logout"><i class="material-icons">logout</i></button>
       </div>
       </mat-toolbar>
       <!-- main -->

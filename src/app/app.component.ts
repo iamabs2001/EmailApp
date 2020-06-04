@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 export class AppComponent {
 
   isLoggedIn = false;
+  isFullScreen : Boolean =  false;
 
   constructor(private router : Router) { 
     this.ActivateFeatures();
@@ -26,7 +27,19 @@ export class AppComponent {
       this.isLoggedIn = false;
     }
     console.log("features Toggled");
-    
+  }
+
+  ToggleFullScreen() {
+    let elem = document.documentElement;
+    if(this.isFullScreen == true) {
+      if (document.exitFullscreen) 
+        document.exitFullscreen();
+        this.isFullScreen = false;
+    } else {
+      if (elem.requestFullscreen) 
+        elem.requestFullscreen(); 
+        this.isFullScreen = true;
+    }
   }
     
 }
