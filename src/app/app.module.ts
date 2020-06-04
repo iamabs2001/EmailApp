@@ -9,12 +9,20 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RegisterComponent } from './register/register.component';
 import { ProfileComponent } from './profile/profile.component';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
+import { MailComponent } from './mail/mail.component';
+import { InboxComponent } from './inbox/inbox.component';
+import { SentComponent } from './sent/sent.component';
+import { BinComponent } from './bin/bin.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    ProfileComponent
+    ProfileComponent,
+    MailComponent,
+    InboxComponent,
+    SentComponent,
+    BinComponent
   ],
   imports: [
     BrowserModule,

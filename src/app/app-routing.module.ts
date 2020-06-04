@@ -4,13 +4,14 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { ProfileComponent } from './profile/profile.component';
 import { AuthGuardService } from './services/auth-guard.service';
-
+import { MailComponent } from './mail/mail.component';
 
 const routes: Routes = [
   { path : "login", component : LoginComponent },
   { path : "register", component : RegisterComponent },
   { path : "profile", component : ProfileComponent,canActivate:[AuthGuardService]},
-  { path : "**", redirectTo : "login" },
+  { path : "mail", component : MailComponent,canActivate:[AuthGuardService]},
+  { path : "**", redirectTo : "mail" },
 ];
 
 @NgModule({

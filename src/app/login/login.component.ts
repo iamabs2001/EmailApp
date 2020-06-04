@@ -43,7 +43,7 @@ export class LoginComponent implements OnInit {
           localStorage.setItem('token',data['body']['token']);
           this.isError = false;
           feature.ActivateFeatures();
-          this.router.navigateByUrl('profile');
+          this.router.navigateByUrl('mail');
         }
     }).catch(err => {
         alert("something wrong in login");
