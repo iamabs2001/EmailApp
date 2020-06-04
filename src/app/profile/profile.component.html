@@ -4,7 +4,7 @@
         <p>{{user.name}}</p>
     </mat-card-header>
     <mat-card-content>
-        <img src="{{user.profile}}" alt="Profile" width="100px" height="100px">
+        <img src="{{user.profile}}" alt="Profile" width="100px" height="100px" matTooltip="{{user.name}}">
         <form #userUpdate="ngForm">
             <mat-form-field appearance="outline">
                 <mat-label>Your Name</mat-label>
