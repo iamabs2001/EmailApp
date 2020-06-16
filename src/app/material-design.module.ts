@@ -12,6 +12,9 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
+import {MatListModule} from '@angular/material/list';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 @NgModule({
   declarations: [],
   imports: [
@@ -19,12 +22,14 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     BrowserAnimationsModule,
     MatSidenavModule, MatToolbarModule, MatMenuModule,MatButtonModule,
     MatFormFieldModule,MatCardModule,MatGridListModule,MatInputModule,
-    MatDividerModule,MatTabsModule,MatTooltipModule
+    MatDividerModule,MatTabsModule,MatTooltipModule,MatBottomSheetModule,
+    MatListModule,MatSnackBarModule
   ],exports : [
     BrowserAnimationsModule,
     MatSidenavModule, MatToolbarModule, MatMenuModule,MatButtonModule,
     MatFormFieldModule,MatCardModule,MatGridListModule,MatInputModule,
-    MatDividerModule,MatTabsModule,MatTooltipModule
+    MatDividerModule,MatTabsModule,MatTooltipModule,MatBottomSheetModule,
+    MatListModule,MatSnackBarModule
 
   ]
 })

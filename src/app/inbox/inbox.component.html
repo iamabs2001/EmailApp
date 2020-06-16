@@ -1,1 +1,12 @@
-<p>inbox works!</p>
+<mat-selection-list>
+        <!-- <div mat-subheader>Your inbox Mails</div> -->
+        <mat-list-option *ngFor="let mail of mails">
+          <i class="material-icons" mat-list-icon>mail</i>
+          <div mat-line>{{mail.from}}</div>
+          <div mat-line>
+               {{mail.subject}} 
+             <span style="color:rgb(10, 131, 230)"> {{mail.time | date}} </span>
+               <!-- <button mat-icon-button><i class="material-icons del">delete</i></button> -->
+          </div> 
+        </mat-list-option>
+</mat-selection-list>

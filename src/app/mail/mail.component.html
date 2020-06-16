@@ -1,3 +1,4 @@
+<div style="height: 450px; overflow: scroll">
 <mat-tab-group mat-align-tabs="center" animationDuration="200ms">
     <mat-tab> 
         <ng-template mat-tab-label>
@@ -21,4 +22,5 @@
     </mat-tab>
 </mat-tab-group>
 
-  <button mat-fab class="fab" color="primary"  matTooltip="Compose A New Mail"><i class="material-icons">add</i></button>
+  <button (click)="openBottomSheet()" mat-fab class="fab" color="primary"  matTooltip="Compose A New Mail"><i class="material-icons">add</i></button>
+</div>

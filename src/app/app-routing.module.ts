@@ -7,6 +7,7 @@ import { AuthGuardService } from './services/auth-guard.service';
 import { MailComponent } from './mail/mail.component';
 
 const routes: Routes = [
+  { path : "", component : LoginComponent },
   { path : "login", component : LoginComponent },
   { path : "register", component : RegisterComponent },
   { path : "profile", component : ProfileComponent,canActivate:[AuthGuardService]},

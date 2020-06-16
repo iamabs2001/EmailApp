@@ -1,0 +1,17 @@
+<div>
+    <form #compose="ngForm">
+        <mat-form-field appearance="fill" style="width:90%">
+            <mat-label>To</mat-label>
+            <input matInput ngModel name="to">
+          </mat-form-field> <br>
+          <mat-form-field appearance="fill" style="width:90%">
+            <mat-label>Subject</mat-label>
+            <input matInput ngModel name="subject">
+          </mat-form-field> <br>
+        <mat-form-field appearance="fill" style="width:90%">
+            <mat-label>Body</mat-label>
+            <textarea matInput ngModel name="body"></textarea>
+        </mat-form-field>
+    </form>
+    <button mat-raised-button color="primary" (click)="sendMail(compose.value);">send</button>
+</div>

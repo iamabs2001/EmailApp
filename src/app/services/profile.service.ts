@@ -8,7 +8,6 @@ import { User } from '../model/user.model';
 export class ProfileService {
   
   BASE_URL = "http://localhost:8080/api/user";
-  token = localStorage.getItem('token');
 
   constructor(private http : HttpClient) { }
 

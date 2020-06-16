@@ -9,7 +9,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RegisterComponent } from './register/register.component';
 import { ProfileComponent } from './profile/profile.component';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
-import { MailComponent } from './mail/mail.component';
+import { MailComponent, compose } from './mail/mail.component';
 import { InboxComponent } from './inbox/inbox.component';
 import { SentComponent } from './sent/sent.component';
 import { BinComponent } from './bin/bin.component';
@@ -24,7 +24,8 @@ import { environment } from '../environments/environment';
     MailComponent,
     InboxComponent,
     SentComponent,
-    BinComponent
+    BinComponent,
+    compose
   ],
   imports: [
     BrowserModule,
